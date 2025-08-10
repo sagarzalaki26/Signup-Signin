@@ -12,7 +12,7 @@ mongoose.connect("mongodb://127.0.0.1:27017/employee")
   .then(() => console.log("MongoDB connected"))
   .catch(err => console.log("DB error", err));
 
- app.post('/login',(req,res)=>{
+  app.post('/login', (req, res)=>{
   const {email,password}=req.body;
   Employeemodel.findOne({email:email})
     .then(user=>{
